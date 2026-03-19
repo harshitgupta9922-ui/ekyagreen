@@ -26,7 +26,7 @@ export default function Navbar() {
           <NavLink to="/partners" onClick={() => setMenuOpen(false)}>Partners</NavLink>
           <NavLink to="/sustainability" onClick={() => setMenuOpen(false)}>Sustainability</NavLink>
           <NavLink to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink>
-          <Link to="/contact" className="navbar__signin" onClick={() => setMenuOpen(false)}>
+          <Link to="/auth" className="navbar__signin" onClick={() => setMenuOpen(false)}>
             <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
             </svg>

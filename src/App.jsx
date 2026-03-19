@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -7,12 +7,15 @@ import Solutions from './pages/Solutions'
 import Partners from './pages/Partners'
 import Sustainability from './pages/Sustainability'
 import Contact from './pages/Contact'
+import Auth from './pages/Auth'
 import './App.css'
 
-export default function App() {
+function Layout() {
+  const { pathname } = useLocation()
+  const isAuth = pathname === '/auth'
   return (
     <>
-      <Navbar />
+      {!isAuth && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -20,8 +23,13 @@ export default function App() {
         <Route path="/partners" element={<Partners />} />
         <Route path="/sustainability" element={<Sustainability />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/auth" element={<Auth />} />
       </Routes>
-      <Footer />
+      {!isAuth && <Footer />}
     </>
   )
+}
+
+export default function App() {
+  return <Layout />
 }
