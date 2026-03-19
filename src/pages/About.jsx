@@ -67,7 +67,7 @@ export default function About() {
           </div>
           <div className="card about-founder__card">
             <div className="founder__avatar">
-              <img src="/founder.png" alt="Sarasvathy TK" />
+              <img src="/founder.jpg" alt="Sarasvathy TK" />
             </div>
             <h3>Sarasvathy TK</h3>
             <span className="founder__role">Founder and CEO</span>
